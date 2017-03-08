@@ -18,9 +18,10 @@ block content
       .adminLogin
         a(ng-click="showAdmin = !showAdmin") Click here for admin login
     .adminLogin(ng-show="showAdmin")
-      form
+      form(action="/login", method="post")
+        input(type="hidden", name="username", ng-model="admin")
         input(type="password", name="password", ng-model="password")
-        button(ng-click="adminLogin()") Sign-In
+        button(type="submit") Sign-In
       .mainLogin
         a(ng-click="showAdmin = !showAdmin") Back to main login
     .loginError(ng-show="showError")

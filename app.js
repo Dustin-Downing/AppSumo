@@ -4,13 +4,27 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var basicAuth = require('express-basic-auth');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var answers = require('./routes/answers');
 var questions = require('./routes/questions');
+var admins = require('./routes/admins');
 
 var app = express();
+
+// auth setup
+var staticUserAuth = basicAuth({
+    users: { 'admin': 'hireDustin' },
+    unauthorizedResponse: getUnauthorizedResponse
+});
+//TODO(): customize this responds
+function getUnauthorizedResponse(req) {
+  return req.auth ?
+    ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected') :
+    'No credentials provided'
+};
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/answers', answers);
+app.use(staticUserAuth);
+app.use('/dashboard', admins);
 app.use('/questions', questions);
 
 // catch 404 and forward to error handler

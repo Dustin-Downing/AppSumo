@@ -2,17 +2,17 @@ angular.module('sumoApp', ['ngMaterial', 'ngResource'])
 	.controller('LoginCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
     $scope.showAdmin = false;
 		$scope.isNewUser = "true";
-    $scope.adminLogin = () => {
-      //hide old error messages
-      $scope.showError = false;
-      //check the password
-      if($scope.password == "1234") { // TODO(): add auth
-        $window.location.href = '/dashboard';
-      } else {
-        $scope.showError = true;
-        $scope.errorMessage = "Password incorrect. Please try again.";
-      }
-    };
+    // $scope.adminLogin = () => {
+    //   //hide old error messages
+    //   $scope.showError = false;
+    //   //check the password
+    //   if($scope.password == "1234") { // TODO(): add auth
+    //     $window.location.href = '/dashboard';
+    //   } else {
+    //     $scope.showError = true;
+    //     $scope.errorMessage = "Password incorrect. Please try again.";
+    //   }
+    // };
     $scope.login = () => {
       //hide old error messages
       $scope.showError = false;

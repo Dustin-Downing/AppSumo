@@ -13,6 +13,10 @@ router.get('/', function(req, res, next) {
   });
 });
 
+// router.post('/login', function(req, res, next) { 
+//
+// });
+
 router.get('/welcome/:userId', function(req, res, next) {
   models.User.find({
     where: {
@@ -26,38 +30,6 @@ router.get('/welcome/:userId', function(req, res, next) {
         user: user,
         question: questions[0]
       });
-    })
-  })
-});
-
-// TODO(): add auth
-router.get('/dashboard', function(req, res, next) {
-  models.Question.findAll({
-  }).then(function(questions) {
-    res.render('dash', {
-      hideNew : false,
-      questions : questions
-    })
-  })
-});
-
-// TODO(): add auth
-router.get('/dashboard/:questionId', function(req, res, next) {
-  //TODO(): add error catch for questionId that don't exist
-  models.Question.findAll({
-  }).then(function(questions) {
-    models.Question.find({
-      where: {
-        id: req.params.questionId
-      },
-      include: [ models.Answer, models.Option ]
-    }).then(function(question) {
-      res.render('report', {
-        hideNew : true,
-        title: "admin dash",
-        questions : questions,
-        question : question
-      })
     })
   })
 });
