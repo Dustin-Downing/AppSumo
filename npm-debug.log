@@ -1,0 +1,214 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/dustindowning/.nvm/v0.10.46/bin/node',
+1 verbose cli   '/Users/dustindowning/.nvm/v0.10.46/bin/npm',
+1 verbose cli   'shrinkwrap' ]
+2 info using npm@2.15.1
+3 info using node@v0.10.46
+4 verbose stack Error: Problems were encountered
+4 verbose stack Please correct and try again.
+4 verbose stack extraneous: anymatch@1.3.0 /Users/dustindowning/Documents/AppSumo/node_modules/anymatch
+4 verbose stack extraneous: argparse@1.0.9 /Users/dustindowning/Documents/AppSumo/node_modules/argparse
+4 verbose stack extraneous: array-find-index@1.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/array-find-index
+4 verbose stack extraneous: arrify@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/arrify
+4 verbose stack extraneous: async@1.5.2 /Users/dustindowning/Documents/AppSumo/node_modules/async
+4 verbose stack extraneous: async-each@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/async-each
+4 verbose stack extraneous: binary-extensions@1.8.0 /Users/dustindowning/Documents/AppSumo/node_modules/binary-extensions
+4 verbose stack extraneous: chokidar@1.6.1 /Users/dustindowning/Documents/AppSumo/node_modules/chokidar
+4 verbose stack extraneous: coffee-script@1.10.0 /Users/dustindowning/Documents/AppSumo/node_modules/coffee-script
+4 verbose stack extraneous: colors@1.1.2 /Users/dustindowning/Documents/AppSumo/node_modules/colors
+4 verbose stack extraneous: connect-flash@0.1.1 /Users/dustindowning/Documents/AppSumo/node_modules/connect-flash
+4 verbose stack extraneous: currently-unhandled@0.4.1 /Users/dustindowning/Documents/AppSumo/node_modules/currently-unhandled
+4 verbose stack extraneous: deep-extend@0.4.1 /Users/dustindowning/Documents/AppSumo/node_modules/deep-extend
+4 verbose stack extraneous: duplexer@0.1.1 /Users/dustindowning/Documents/AppSumo/node_modules/duplexer
+4 verbose stack extraneous: es6-promise@3.3.1 /Users/dustindowning/Documents/AppSumo/node_modules/es6-promise
+4 verbose stack extraneous: esprima@2.7.3 /Users/dustindowning/Documents/AppSumo/node_modules/esprima
+4 verbose stack extraneous: event-stream@3.3.4 /Users/dustindowning/Documents/AppSumo/node_modules/event-stream
+4 verbose stack extraneous: eventemitter2@0.4.14 /Users/dustindowning/Documents/AppSumo/node_modules/eventemitter2
+4 verbose stack extraneous: exit@0.1.2 /Users/dustindowning/Documents/AppSumo/node_modules/exit
+4 verbose stack extraneous: express-basic-auth@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/express-basic-auth
+4 verbose stack extraneous: from@0.1.3 /Users/dustindowning/Documents/AppSumo/node_modules/from
+4 verbose stack extraneous: fs.realpath@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/fs.realpath
+4 verbose stack extraneous: get-stdin@4.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/get-stdin
+4 verbose stack extraneous: getobject@0.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/getobject
+4 verbose stack extraneous: got@3.3.1 /Users/dustindowning/Documents/AppSumo/node_modules/got
+4 verbose stack extraneous: grunt-known-options@1.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-known-options
+4 verbose stack extraneous: grunt-nodemon@0.4.2 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-nodemon
+4 verbose stack extraneous: hooker@0.2.3 /Users/dustindowning/Documents/AppSumo/node_modules/hooker
+4 verbose stack extraneous: ignore-by-default@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/ignore-by-default
+4 verbose stack extraneous: imurmurhash@0.1.4 /Users/dustindowning/Documents/AppSumo/node_modules/imurmurhash
+4 verbose stack extraneous: infinity-agent@2.0.3 /Users/dustindowning/Documents/AppSumo/node_modules/infinity-agent
+4 verbose stack extraneous: is-binary-path@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/is-binary-path
+4 verbose stack extraneous: is-finite@1.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/is-finite
+4 verbose stack extraneous: is-npm@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/is-npm
+4 verbose stack extraneous: is-redirect@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/is-redirect
+4 verbose stack extraneous: is-stream@1.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/is-stream
+4 verbose stack extraneous: js-yaml@3.5.5 /Users/dustindowning/Documents/AppSumo/node_modules/js-yaml
+4 verbose stack extraneous: latest-version@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/latest-version
+4 verbose stack extraneous: lodash._baseassign@3.2.0 /Users/dustindowning/Documents/AppSumo/node_modules/lodash._baseassign
+4 verbose stack extraneous: lodash._bindcallback@3.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/lodash._bindcallback
+4 verbose stack extraneous: lodash._createassigner@3.1.1 /Users/dustindowning/Documents/AppSumo/node_modules/lodash._createassigner
+4 verbose stack extraneous: lodash.assign@3.2.0 /Users/dustindowning/Documents/AppSumo/node_modules/lodash.assign
+4 verbose stack extraneous: lodash.defaults@3.1.2 /Users/dustindowning/Documents/AppSumo/node_modules/lodash.defaults
+4 verbose stack extraneous: loud-rejection@1.6.0 /Users/dustindowning/Documents/AppSumo/node_modules/loud-rejection
+4 verbose stack extraneous: lowercase-keys@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/lowercase-keys
+4 verbose stack extraneous: map-obj@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/map-obj
+4 verbose stack extraneous: map-stream@0.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/map-stream
+4 verbose stack extraneous: nested-error-stacks@1.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/nested-error-stacks
+4 verbose stack extraneous: os-tmpdir@1.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/os-tmpdir
+4 verbose stack extraneous: osenv@0.1.4 /Users/dustindowning/Documents/AppSumo/node_modules/osenv
+4 verbose stack extraneous: package-json@1.2.0 /Users/dustindowning/Documents/AppSumo/node_modules/package-json
+4 verbose stack extraneous: path-is-absolute@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/path-is-absolute
+4 verbose stack extraneous: pause-stream@0.0.11 /Users/dustindowning/Documents/AppSumo/node_modules/pause-stream
+4 verbose stack extraneous: prepend-http@1.0.4 /Users/dustindowning/Documents/AppSumo/node_modules/prepend-http
+4 verbose stack extraneous: ps-tree@1.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/ps-tree
+4 verbose stack extraneous: redent@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/redent
+4 verbose stack extraneous: registry-url@3.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/registry-url
+4 verbose stack extraneous: semver-diff@2.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/semver-diff
+4 verbose stack extraneous: set-immediate-shim@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/set-immediate-shim
+4 verbose stack extraneous: signal-exit@3.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/signal-exit
+4 verbose stack extraneous: slide@1.1.6 /Users/dustindowning/Documents/AppSumo/node_modules/slide
+4 verbose stack extraneous: split@0.3.3 /Users/dustindowning/Documents/AppSumo/node_modules/split
+4 verbose stack extraneous: sprintf-js@1.0.3 /Users/dustindowning/Documents/AppSumo/node_modules/sprintf-js
+4 verbose stack extraneous: stream-combiner@0.0.4 /Users/dustindowning/Documents/AppSumo/node_modules/stream-combiner
+4 verbose stack extraneous: stream-shift@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/stream-shift
+4 verbose stack extraneous: string-length@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/string-length
+4 verbose stack extraneous: strip-json-comments@2.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/strip-json-comments
+4 verbose stack extraneous: through@2.3.8 /Users/dustindowning/Documents/AppSumo/node_modules/through
+4 verbose stack extraneous: timed-out@2.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/timed-out
+4 verbose stack extraneous: trim-newlines@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/trim-newlines
+4 verbose stack extraneous: undefsafe@0.0.3 /Users/dustindowning/Documents/AppSumo/node_modules/undefsafe
+4 verbose stack extraneous: underscore.string@3.2.3 /Users/dustindowning/Documents/AppSumo/node_modules/underscore.string
+4 verbose stack extraneous: update-notifier@0.5.0 /Users/dustindowning/Documents/AppSumo/node_modules/update-notifier
+4 verbose stack extraneous: write-file-atomic@1.3.1 /Users/dustindowning/Documents/AppSumo/node_modules/write-file-atomic
+4 verbose stack extraneous: xdg-basedir@2.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/xdg-basedir
+4 verbose stack extraneous: repeating@1.1.3 /Users/dustindowning/Documents/AppSumo/node_modules/repeating
+4 verbose stack extraneous: rimraf@2.2.8 /Users/dustindowning/Documents/AppSumo/node_modules/rimraf
+4 verbose stack extraneous: strip-indent@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/strip-indent
+4 verbose stack extraneous: camelcase-keys@2.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/camelcase-keys
+4 verbose stack extraneous: configstore@1.4.0 /Users/dustindowning/Documents/AppSumo/node_modules/configstore
+4 verbose stack extraneous: duplexify@3.5.0 /Users/dustindowning/Documents/AppSumo/node_modules/duplexify
+4 verbose stack extraneous: grunt-legacy-log@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-legacy-log
+4 verbose stack extraneous: grunt-legacy-log-utils@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-legacy-log-utils
+4 verbose stack extraneous: grunt-legacy-util@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-legacy-util
+4 verbose stack extraneous: indent-string@2.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/indent-string
+4 verbose stack extraneous: meow@3.7.0 /Users/dustindowning/Documents/AppSumo/node_modules/meow
+4 verbose stack extraneous: read-all-stream@3.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/read-all-stream
+4 verbose stack extraneous: readdirp@2.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/readdirp
+4 verbose stack extraneous: nodemon@1.11.0 /Users/dustindowning/Documents/AppSumo/node_modules/nodemon
+4 verbose stack extraneous: rc@1.1.7 /Users/dustindowning/Documents/AppSumo/node_modules/rc
+4 verbose stack extraneous: touch@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/touch
+4 verbose stack extraneous: fsevents@1.1.1 /Users/dustindowning/Documents/AppSumo/node_modules/fsevents
+4 verbose stack extraneous: grunt@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/grunt
+4 verbose stack     at shrinkwrap_ (/Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/lib/shrinkwrap.js:37:15)
+4 verbose stack     at /Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/lib/shrinkwrap.js:31:5
+4 verbose stack     at /Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/lib/ls.js:47:30
+4 verbose stack     at /Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+4 verbose stack     at /Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+4 verbose stack     at cb (/Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+4 verbose stack     at /Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+4 verbose stack     at cb (/Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+4 verbose stack     at /Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+4 verbose stack     at cb (/Users/dustindowning/.nvm/v0.10.46/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+5 verbose cwd /Users/dustindowning/Documents/AppSumo
+6 error Darwin 16.4.0
+7 error argv "/Users/dustindowning/.nvm/v0.10.46/bin/node" "/Users/dustindowning/.nvm/v0.10.46/bin/npm" "shrinkwrap"
+8 error node v0.10.46
+9 error npm  v2.15.1
+10 error Problems were encountered
+10 error Please correct and try again.
+10 error extraneous: anymatch@1.3.0 /Users/dustindowning/Documents/AppSumo/node_modules/anymatch
+10 error extraneous: argparse@1.0.9 /Users/dustindowning/Documents/AppSumo/node_modules/argparse
+10 error extraneous: array-find-index@1.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/array-find-index
+10 error extraneous: arrify@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/arrify
+10 error extraneous: async@1.5.2 /Users/dustindowning/Documents/AppSumo/node_modules/async
+10 error extraneous: async-each@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/async-each
+10 error extraneous: binary-extensions@1.8.0 /Users/dustindowning/Documents/AppSumo/node_modules/binary-extensions
+10 error extraneous: chokidar@1.6.1 /Users/dustindowning/Documents/AppSumo/node_modules/chokidar
+10 error extraneous: coffee-script@1.10.0 /Users/dustindowning/Documents/AppSumo/node_modules/coffee-script
+10 error extraneous: colors@1.1.2 /Users/dustindowning/Documents/AppSumo/node_modules/colors
+10 error extraneous: connect-flash@0.1.1 /Users/dustindowning/Documents/AppSumo/node_modules/connect-flash
+10 error extraneous: currently-unhandled@0.4.1 /Users/dustindowning/Documents/AppSumo/node_modules/currently-unhandled
+10 error extraneous: deep-extend@0.4.1 /Users/dustindowning/Documents/AppSumo/node_modules/deep-extend
+10 error extraneous: duplexer@0.1.1 /Users/dustindowning/Documents/AppSumo/node_modules/duplexer
+10 error extraneous: es6-promise@3.3.1 /Users/dustindowning/Documents/AppSumo/node_modules/es6-promise
+10 error extraneous: esprima@2.7.3 /Users/dustindowning/Documents/AppSumo/node_modules/esprima
+10 error extraneous: event-stream@3.3.4 /Users/dustindowning/Documents/AppSumo/node_modules/event-stream
+10 error extraneous: eventemitter2@0.4.14 /Users/dustindowning/Documents/AppSumo/node_modules/eventemitter2
+10 error extraneous: exit@0.1.2 /Users/dustindowning/Documents/AppSumo/node_modules/exit
+10 error extraneous: express-basic-auth@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/express-basic-auth
+10 error extraneous: from@0.1.3 /Users/dustindowning/Documents/AppSumo/node_modules/from
+10 error extraneous: fs.realpath@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/fs.realpath
+10 error extraneous: get-stdin@4.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/get-stdin
+10 error extraneous: getobject@0.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/getobject
+10 error extraneous: got@3.3.1 /Users/dustindowning/Documents/AppSumo/node_modules/got
+10 error extraneous: grunt-known-options@1.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-known-options
+10 error extraneous: grunt-nodemon@0.4.2 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-nodemon
+10 error extraneous: hooker@0.2.3 /Users/dustindowning/Documents/AppSumo/node_modules/hooker
+10 error extraneous: ignore-by-default@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/ignore-by-default
+10 error extraneous: imurmurhash@0.1.4 /Users/dustindowning/Documents/AppSumo/node_modules/imurmurhash
+10 error extraneous: infinity-agent@2.0.3 /Users/dustindowning/Documents/AppSumo/node_modules/infinity-agent
+10 error extraneous: is-binary-path@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/is-binary-path
+10 error extraneous: is-finite@1.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/is-finite
+10 error extraneous: is-npm@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/is-npm
+10 error extraneous: is-redirect@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/is-redirect
+10 error extraneous: is-stream@1.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/is-stream
+10 error extraneous: js-yaml@3.5.5 /Users/dustindowning/Documents/AppSumo/node_modules/js-yaml
+10 error extraneous: latest-version@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/latest-version
+10 error extraneous: lodash._baseassign@3.2.0 /Users/dustindowning/Documents/AppSumo/node_modules/lodash._baseassign
+10 error extraneous: lodash._bindcallback@3.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/lodash._bindcallback
+10 error extraneous: lodash._createassigner@3.1.1 /Users/dustindowning/Documents/AppSumo/node_modules/lodash._createassigner
+10 error extraneous: lodash.assign@3.2.0 /Users/dustindowning/Documents/AppSumo/node_modules/lodash.assign
+10 error extraneous: lodash.defaults@3.1.2 /Users/dustindowning/Documents/AppSumo/node_modules/lodash.defaults
+10 error extraneous: loud-rejection@1.6.0 /Users/dustindowning/Documents/AppSumo/node_modules/loud-rejection
+10 error extraneous: lowercase-keys@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/lowercase-keys
+10 error extraneous: map-obj@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/map-obj
+10 error extraneous: map-stream@0.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/map-stream
+10 error extraneous: nested-error-stacks@1.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/nested-error-stacks
+10 error extraneous: os-tmpdir@1.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/os-tmpdir
+10 error extraneous: osenv@0.1.4 /Users/dustindowning/Documents/AppSumo/node_modules/osenv
+10 error extraneous: package-json@1.2.0 /Users/dustindowning/Documents/AppSumo/node_modules/package-json
+10 error extraneous: path-is-absolute@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/path-is-absolute
+10 error extraneous: pause-stream@0.0.11 /Users/dustindowning/Documents/AppSumo/node_modules/pause-stream
+10 error extraneous: prepend-http@1.0.4 /Users/dustindowning/Documents/AppSumo/node_modules/prepend-http
+10 error extraneous: ps-tree@1.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/ps-tree
+10 error extraneous: redent@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/redent
+10 error extraneous: registry-url@3.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/registry-url
+10 error extraneous: semver-diff@2.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/semver-diff
+10 error extraneous: set-immediate-shim@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/set-immediate-shim
+10 error extraneous: signal-exit@3.0.2 /Users/dustindowning/Documents/AppSumo/node_modules/signal-exit
+10 error extraneous: slide@1.1.6 /Users/dustindowning/Documents/AppSumo/node_modules/slide
+10 error extraneous: split@0.3.3 /Users/dustindowning/Documents/AppSumo/node_modules/split
+10 error extraneous: sprintf-js@1.0.3 /Users/dustindowning/Documents/AppSumo/node_modules/sprintf-js
+10 error extraneous: stream-combiner@0.0.4 /Users/dustindowning/Documents/AppSumo/node_modules/stream-combiner
+10 error extraneous: stream-shift@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/stream-shift
+10 error extraneous: string-length@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/string-length
+10 error extraneous: strip-json-comments@2.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/strip-json-comments
+10 error extraneous: through@2.3.8 /Users/dustindowning/Documents/AppSumo/node_modules/through
+10 error extraneous: timed-out@2.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/timed-out
+10 error extraneous: trim-newlines@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/trim-newlines
+10 error extraneous: undefsafe@0.0.3 /Users/dustindowning/Documents/AppSumo/node_modules/undefsafe
+10 error extraneous: underscore.string@3.2.3 /Users/dustindowning/Documents/AppSumo/node_modules/underscore.string
+10 error extraneous: update-notifier@0.5.0 /Users/dustindowning/Documents/AppSumo/node_modules/update-notifier
+10 error extraneous: write-file-atomic@1.3.1 /Users/dustindowning/Documents/AppSumo/node_modules/write-file-atomic
+10 error extraneous: xdg-basedir@2.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/xdg-basedir
+10 error extraneous: repeating@1.1.3 /Users/dustindowning/Documents/AppSumo/node_modules/repeating
+10 error extraneous: rimraf@2.2.8 /Users/dustindowning/Documents/AppSumo/node_modules/rimraf
+10 error extraneous: strip-indent@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/strip-indent
+10 error extraneous: camelcase-keys@2.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/camelcase-keys
+10 error extraneous: configstore@1.4.0 /Users/dustindowning/Documents/AppSumo/node_modules/configstore
+10 error extraneous: duplexify@3.5.0 /Users/dustindowning/Documents/AppSumo/node_modules/duplexify
+10 error extraneous: grunt-legacy-log@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-legacy-log
+10 error extraneous: grunt-legacy-log-utils@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-legacy-log-utils
+10 error extraneous: grunt-legacy-util@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/grunt-legacy-util
+10 error extraneous: indent-string@2.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/indent-string
+10 error extraneous: meow@3.7.0 /Users/dustindowning/Documents/AppSumo/node_modules/meow
+10 error extraneous: read-all-stream@3.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/read-all-stream
+10 error extraneous: readdirp@2.1.0 /Users/dustindowning/Documents/AppSumo/node_modules/readdirp
+10 error extraneous: nodemon@1.11.0 /Users/dustindowning/Documents/AppSumo/node_modules/nodemon
+10 error extraneous: rc@1.1.7 /Users/dustindowning/Documents/AppSumo/node_modules/rc
+10 error extraneous: touch@1.0.0 /Users/dustindowning/Documents/AppSumo/node_modules/touch
+10 error extraneous: fsevents@1.1.1 /Users/dustindowning/Documents/AppSumo/node_modules/fsevents
+10 error extraneous: grunt@1.0.1 /Users/dustindowning/Documents/AppSumo/node_modules/grunt
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
