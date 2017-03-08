@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div(class="full-height", ng-controller="LoginCtrl")
+
+    h1= title
+
+    p(ng-repeat="person in persons") Hello {{person}}
+
+    .mainLogin(ng-hide="showAdmin")
+      form
+        input(type="radio", name="isNewUser", ng-model="isNewUser", value="false")
+        |  Existing User
+        input(type="radio", name="isNewUser", ng-model="isNewUser", value="true")
+        |  New User <br />
+        input(type="text", name="username", ng-model="username")
+        button(ng-click="login()") Log-In
+      .adminLogin
+        a(ng-click="showAdmin = !showAdmin") Click here for admin login
+    .adminLogin(ng-show="showAdmin")
+      form
+        input(type="password", name="password", ng-model="password")
+        button(ng-click="adminLogin()") Sign-In
+      .mainLogin
+        a(ng-click="showAdmin = !showAdmin") Back to main login
+    .loginError(ng-show="showError")
+      p {{errorMessage}}

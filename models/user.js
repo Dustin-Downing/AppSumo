@@ -5,6 +5,8 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        User.hasMany(models.Answer);
+        // User.belongsTo(models.Question, { as: 'nextRandomQuestion' })
       }
     }
   });

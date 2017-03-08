@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div(class="full-height", ng-controller="DashCtrl", ng-init="hideNew = #{hideNew}")
+
+    ul
+      li
+        a(href="/") Back
+      li
+        a(ng-click="hideNew = !hideNew") Make new question
+      each question in questions
+        li
+          a(href="/dashboard/#{question.id}") #{question.title}
+
+    #adminAddNew(ng-hide="hideNew")
+      form
+        input(type="text", placeholder="Question Title" name="title", ng-model="title")
+        input(type="text", placeholder="Question" name="questionDescription", ng-model="questionDescription")
+        ul
+          li(ng-repeat="option in options")
+            | {{ option }}
+            a(ng-click="options.splice($index, 1);")  x
+          li
+            input(type="text", name="newOption", ng-model="newOption")
+            a(ng-click="addOption()") Add Option
+        button(ng-click="makeQuestion()") Create Question
+
+
+    #adminContainer(ng-hide="!hideNew")
+      block container

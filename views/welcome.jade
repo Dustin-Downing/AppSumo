@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div(class="full-height", ng-controller="WelcomeCtrl")
+    script.
+      var userId = "#{user.id}";
+      var questionId = "#{question.id}";
+
+    a(href="/") Back
+    h1 Welcome #{user.username}
+
+    h2= question.title
+    form(ng-init="result=null")
+      | Q: #{question.question} <br />
+      each option in question.Options
+        input(type="radio", name="result", ng-model="result", value="#{option.id}")
+        | #{option.discription} <br />
+      button(ng-click="submit()") Submit
+    .formError(ng-show="showError")
+      p {{errorMessage}}
