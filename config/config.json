@@ -1,6 +1,6 @@
 {
   "production": {
-    "username": "dustin",
+    "username": "dustin!",
     "password": "XDUgq8hU6e!KkD^cy9",
     "database": "AppSumo",
     "host": "rdssmall.cbse8m4fgs9g.us-west-2.rds.amazonaws.com",
@@ -16,7 +16,7 @@
     "port": "8889"
   },
   "development": {
-    "username": "dustin",
+    "username": "dustin!",
     "password": "XDUgq8hU6e!KkD^cy9",
     "database": "AppSumo",
     "host": "rdssmall.cbse8m4fgs9g.us-west-2.rds.amazonaws.com",

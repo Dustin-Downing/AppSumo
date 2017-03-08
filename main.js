@@ -12,16 +12,16 @@ var answers      = require('./routes/answers');
 
 var app          = express();
 
-require('./config/passport')(passport); // pass passport for configuration
+// require('./config/passport')(passport); // pass passport for configuration
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // required for passport
-app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
+// app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false })); // session secret
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -31,11 +31,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', require('./routes/index')(app, passport));
-app.use('/users', users);
-app.use('/answers', answers);
-app.use('/dashboard', require('./routes/admins')(app, passport));
-app.use('/questions', require('./routes/questions')(app, passport));
+app.use('/', require('./routes/temp'));
+// app.use('/', require('./routes/index')(app, passport));
+// app.use('/users', users);
+// app.use('/answers', answers);
+// app.use('/dashboard', require('./routes/admins')(app, passport));
+// app.use('/questions', require('./routes/questions')(app, passport));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,13 +1,23 @@
 extends layout
 
 block content
-  div(class="full-height", ng-controller="LoginCtrl")
+  md-content(ng-controller="LoginCtrl", layout="row", layout-align="space-around", layout-padding="layout-padding", ng-cloak="ng-cloak", class="login-form")
 
-    h1= title
+    md-card(flex="flex", flex-gt-sm="50", flex-gt-md="33", ng-hide="showAdmin")
+      md-toolbar
+        .md-toolbar-tools
+            h2
+              span Login Form
+      md-card-content
+        form
+          md-input-container(class="md-block")
+            label Your Name
+            input(type="text", name="username", ng-model="username" required)
 
-    p(ng-repeat="person in persons") Hello {{person}}
 
-    .mainLogin(ng-hide="showAdmin")
+
+
+
       form
         input(type="radio", name="isNewUser", ng-model="isNewUser", value="false")
         |  Existing User
