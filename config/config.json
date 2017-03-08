@@ -1,5 +1,5 @@
 {
-  "development": {
+  "production": {
     "username": "root",
     "password": "root",
     "database": "AppSumo",
@@ -14,11 +14,12 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+  "development": {
+    "username": "dustin",
+    "password": "XDUgq8hU6e!KkD^cy9",
+    "database": "AppSumo",
+    "host": "rdssmall.cbse8m4fgs9g.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port": "3306"
   }
 }
