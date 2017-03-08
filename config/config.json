@@ -1,5 +1,5 @@
 {
-  "development": {
+  "production": {
     "username": "root",
     "password": "root",
     "database": "AppSumo",
@@ -14,7 +14,7 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "production": {
+  "development": {
     "username": "dustin",
     "password": "XDUgq8hU6e!KkD^cy9",
     "database": "AppSumo",
