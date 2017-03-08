@@ -1,34 +1,27 @@
-var express = require('express');
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
+var express      = require('express');
+var path         = require('path');
+var favicon      = require('serve-favicon');
+var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var basicAuth = require('express-basic-auth');
+var bodyParser   = require('body-parser');
+var session      = require('express-session');
+var passport     = require('passport');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var answers = require('./routes/answers');
-var questions = require('./routes/questions');
-var admins = require('./routes/admins');
+var users        = require('./routes/users');
+var answers      = require('./routes/answers');
 
-var app = express();
+var app          = express();
 
-// auth setup
-var staticUserAuth = basicAuth({
-    users: { 'admin': 'hireDustin' },
-    unauthorizedResponse: getUnauthorizedResponse
-});
-//TODO(): customize this responds
-function getUnauthorizedResponse(req) {
-  return req.auth ?
-    ('Credentials ' + req.auth.user + ':' + req.auth.password + ' rejected') :
-    'No credentials provided'
-};
+require('./config/passport')(passport); // pass passport for configuration
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+// required for passport
+app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -38,12 +31,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+app.use('/', require('./routes/index')(app, passport));
 app.use('/users', users);
 app.use('/answers', answers);
-app.use(staticUserAuth);
-app.use('/dashboard', admins);
-app.use('/questions', questions);
+app.use('/dashboard', require('./routes/admins')(app, passport));
+app.use('/questions', require('./routes/questions')(app, passport));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

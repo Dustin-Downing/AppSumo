@@ -19,7 +19,7 @@ block content
         a(ng-click="showAdmin = !showAdmin") Click here for admin login
     .adminLogin(ng-show="showAdmin")
       form(action="/login", method="post")
-        input(type="hidden", name="username", ng-model="admin")
+        input(type="hidden", name="username", value="admin")
         input(type="password", name="password", ng-model="password")
         button(type="submit") Sign-In
       .mainLogin
