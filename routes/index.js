@@ -2,6 +2,7 @@ module.exports = function(app, passport) {
   var models  = require('../models');
   var express = require('express');
   var router  = express.Router();
+  var bcrypt   = require('bcrypt-nodejs');
 
   /* GET home page. */
   router.get('/', function(req, res, next) {
