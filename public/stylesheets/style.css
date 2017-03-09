@@ -22,12 +22,9 @@ a {
 #logout {
   position: absolute;
   right: 60px;
+  top: 20px;
 }
 
 .loginPanel {
   margin-bottom: 20px;
-}
-
-.report {
-
 }
