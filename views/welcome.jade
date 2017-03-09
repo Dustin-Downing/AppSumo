@@ -1,20 +1,29 @@
 extends layout
 
 block content
-  div(class="full-height", ng-controller="WelcomeCtrl")
-    script.
-      var userId = "#{user.id}";
-      var questionId = "#{question.id}";
+  md-content(ng-controller="WelcomeCtrl", layout="row", layout-align="space-around", layout-padding="layout-padding", ng-cloak="ng-cloak", class="answer-form")
+    md-card(flex="flex", flex-gt-sm="50", flex-gt-md="33", class="loginPanel")
+      md-toolbar(class="md-hue-2")
+        .md-toolbar-tools
+          h2(flex, md-truncate)
+            span Hi #{user.username}!
+          md-button(href="/", class="md-raised", aria-label="Go Back") Back
+      md-card-content
+        if question
+          script.
+            var userId = "#{user.id}";
+            var questionId = "#{question.id}";
 
-    a(href="/") Back
-    h1 Welcome #{user.username}
+          form(name="Form")
+            h3(class="surveyHeader") #{question.question}
+            md-radio-group(ng-model="result", ng-required="true")
+              each option in question.Options
+                md-radio-button(class="md-primary", value="#{option.id}", aria-label="#{option.discription}")
+                  | #{option.discription}
+            md-button(ng-click="submit()", ng-disabled="!Form.$valid", class="md-raised md-primary") Submit
 
-    h2= question.title
-    form(ng-init="result=null")
-      | Q: #{question.question} <br />
-      each option in question.Options
-        input(type="radio", name="result", ng-model="result", value="#{option.id}")
-        | #{option.discription} <br />
-      button(ng-click="submit()") Submit
-    .formError(ng-show="showError")
-      p {{errorMessage}}
+
+          .formError(ng-show="showError")
+            p {{errorMessage}}
+        else
+          h2 Looks like you've answered all of our questions. Thank you!

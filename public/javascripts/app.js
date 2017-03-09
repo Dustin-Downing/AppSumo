@@ -2,17 +2,6 @@ angular.module('sumoApp', ['ngMaterial', 'ngResource'])
 	.controller('LoginCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
     $scope.showAdmin = false;
 		$scope.isNewUser = "true";
-    // $scope.adminLogin = () => {
-    //   //hide old error messages
-    //   $scope.showError = false;
-    //   //check the password
-    //   if($scope.password == "1234") { // TODO(): add auth
-    //     $window.location.href = '/dashboard';
-    //   } else {
-    //     $scope.showError = true;
-    //     $scope.errorMessage = "Password incorrect. Please try again.";
-    //   }
-    // };
     $scope.login = () => {
       //hide old error messages
       $scope.showError = false;
@@ -58,40 +47,23 @@ angular.module('sumoApp', ['ngMaterial', 'ngResource'])
     };
 	}])
   .controller('WelcomeCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
-    $scope.submit = () => {
-      //hide old error messages
-      $scope.showError = false;
-      if(!$scope.result){
-        //if no result was selected
-        $scope.showError = true;
-        $scope.errorMessage = "Nothing selected. Please try again.";
-      } else {
-        //creating answer
-        $http.post('/answers/create', {
-          'result':$scope.result,
-          'UserId':$window.userId,
-          'QuestionId':$window.questionId
-        }).success(function(data, status, headers, config) {
-          console.log("creating a new answer: "+$scope.result);
-          $scope.user = data;
-          $window.location.href = '/welcome/'+$scope.user.id;
-        }).error(function(data) {
-          console.log("Ops: " + data);
-          $scope.showError = true;
-          $scope.errorMessage = "There was a problem submitting your answer. Please try again.";
-        });
-      }
+		$scope.submit = () => {
+      $http.post('/answers/create', {
+        'result':$scope.result,
+        'UserId':$window.userId,
+        'QuestionId':$window.questionId
+      }).success(function(data, status, headers, config) {
+        console.log("creating a new answer: "+$scope.result);
+        $window.location.href = '/welcome/'+$window.userId;
+      }).error(function(data) {
+        console.log("Ops: " + data);
+        //TODO():add error message
+      });
     }
   }])
   .controller('DashCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
-    //TODO(): disable hide addNew when on just the dashboard page
     $scope.options = [];
     $scope.count = [];
-    $scope.addOption = () => {
-      //TODO(): add form validation for options.push(newOption) dups
-      $scope.options.push($scope.newOption);
-      $scope.newOption='';
-    }
     $scope.makeQuestion = () => {
       //TODO(): add form validation for all fields filled
       $http.post('/questions/create', {

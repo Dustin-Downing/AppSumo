@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  div(class="full-height", ng-controller="DashCtrl", ng-init="hideNew = #{hideNew}")
+  md-content(ng-controller="DashCtrl", ng-init="hideNew = #{hideNew}", layout="row", layout-align="space-around", layout-padding="layout-padding", ng-cloak="ng-cloak", class="login-form")
 
     ul
       li
@@ -13,18 +13,32 @@ block content
           a(href="/dashboard/#{question.id}") #{question.title}
 
     #adminAddNew(ng-hide="hideNew")
-      form
-        input(type="text", placeholder="Question Title" name="title", ng-model="title")
-        input(type="text", placeholder="Question" name="questionDescription", ng-model="questionDescription")
-        ul
-          li(ng-repeat="option in options")
-            | {{ option }}
-            a(ng-click="options.splice($index, 1);")  x
-          li
-            input(type="text", name="newOption", ng-model="newOption")
-            a(ng-click="addOption()") Add Option
-        button(ng-click="makeQuestion()") Create Question
-
+      md-card(flex="flex", flex-gt-sm="50", flex-gt-md="33", ng-hide="showAdmin", class="loginPanel")
+        md-toolbar
+          .md-toolbar-tools
+              h2
+                span New Survey
+        md-card-content
+          form(name="Form")
+            md-input-container(class="md-block")
+              label Survey Title
+              input(type="text", name="title", ng-model="title" required)
+              div(ng-messages="Form.title.$error", role="alert", multiple="")
+                div(ng-message="required", class="my-message") Please enter a title.
+            md-input-container(class="md-block")
+              label Question
+              input(type="text", name="questionDescription", ng-model="questionDescription" required)
+              div(ng-messages="Form.questionDescription.$error", role="alert", multiple="")
+                div(ng-message="required", class="my-message") Please enter a question.
+            ul
+              li(ng-repeat="option in options")
+                | {{ option }}
+                a(ng-click="options.splice($index, 1);")  x
+              li
+                md-input-container(class="md-block")
+                  input(type="text", name="newOption", placeholder="New Option", ng-model="newOption")
+                  a(ng-click="addOption()") Add
+            md-button(ng-click="makeQuestion()", ng-disabled="!Form.$valid", class="md-raised md-primary") Create Question
 
     #adminContainer(ng-hide="!hideNew")
       block container

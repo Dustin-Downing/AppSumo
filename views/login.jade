@@ -3,36 +3,39 @@ extends layout
 block content
   md-content(ng-controller="LoginCtrl", layout="row", layout-align="space-around", layout-padding="layout-padding", ng-cloak="ng-cloak", class="login-form")
 
-    md-card(flex="flex", flex-gt-sm="50", flex-gt-md="33", ng-hide="showAdmin")
+    md-card(flex="flex", flex-gt-sm="50", flex-gt-md="33", ng-hide="showAdmin", class="loginPanel")
       md-toolbar
         .md-toolbar-tools
             h2
-              span Login Form
+              span Howdy!
       md-card-content
-        form
+        form(name="Form")
+          md-radio-group(ng-model="isNewUser", layout="row")
+            md-radio-button(class="md-primary", value="false", aria-label="Returning User") Returning User
+            md-radio-button(class="md-primary", value="true", aria-label="New User") New User
           md-input-container(class="md-block")
             label Your Name
             input(type="text", name="username", ng-model="username" required)
-
-
-
-
-
-      form
-        input(type="radio", name="isNewUser", ng-model="isNewUser", value="false")
-        |  Existing User
-        input(type="radio", name="isNewUser", ng-model="isNewUser", value="true")
-        |  New User <br />
-        input(type="text", name="username", ng-model="username")
-        button(ng-click="login()") Log-In
-      .adminLogin
+            div(ng-messages="Form.username.$error", role="alert", multiple="")
+              div(ng-message="required", class="my-message") Please enter your name.
+          md-button(ng-click="login()", ng-disabled="!Form.$valid", class="md-raised md-primary") Log-In
+      .switchLogin
         a(ng-click="showAdmin = !showAdmin") Click here for admin login
-    .adminLogin(ng-show="showAdmin")
-      form(action="/login", method="post")
-        input(type="hidden", name="username", value="admin")
-        input(type="password", name="password", ng-model="password")
-        button(type="submit") Sign-In
-      .mainLogin
+
+    md-card(flex="flex", flex-gt-sm="50", flex-gt-md="33", ng-show="showAdmin", class="loginPanel")
+      md-toolbar
+        .md-toolbar-tools
+            h2
+              span Admin Login
+      md-card-content
+        form(name="Form2", action="/login", method="post")
+          md-input-container(class="md-block")
+            input(type="hidden", name="username", value="admin")
+          md-input-container(class="md-block")
+            label Password
+            input(type="password", name="password", ng-model="password" required)
+            div(ng-messages="Form2.username.$error", role="alert", multiple="")
+              div(ng-message="required", class="my-message") Please enter a password.
+          md-button(type="submit", ng-disabled="!Form2.$valid", class="md-raised md-primary") Sign-In
+      .switchLogin
         a(ng-click="showAdmin = !showAdmin") Back to main login
-    .loginError(ng-show="showError")
-      p {{errorMessage}}

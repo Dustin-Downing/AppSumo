@@ -6,3 +6,24 @@ body {
 a {
   color: #00B7FF;
 }
+
+.switchLogin {
+  text-align: center;
+}
+
+.switchLogin a {
+  position: absolute;
+  margin-top: 1em;
+  margin-left: 2em;
+  color: #7d7d7d;
+  text-decoration: underline;
+}
+
+#logout {
+  position: absolute;
+  right: 60px;
+}
+
+.loginPanel {
+  margin-bottom: 20px;
+}

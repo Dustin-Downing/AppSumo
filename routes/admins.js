@@ -6,6 +6,17 @@ module.exports = function(app, passport) {
 
   router.get('/', isLoggedIn, function(req, res, next) {
     models.Question.findAll({
+      include: [ models.Answer, models.Option ]
+    }).then(function(questions) {
+      res.render('admin', {
+        hideNew : false,
+        questions : questions
+      })
+    })
+  });
+  
+  router.get('/old', isLoggedIn, function(req, res, next) {
+    models.Question.findAll({
     }).then(function(questions) {
       res.render('dash', {
         hideNew : false,
