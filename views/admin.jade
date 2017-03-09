@@ -4,6 +4,8 @@ block content
   #logout
     md-button(href="/logout" class="md-fab" aria-label="Logout")
       i(class="fa fa-sign-out fa-lg")
+      md-tooltip
+        | Sign out
   md-content(ng-controller="DashCtrl", class="md-padding")
     md-tabs(md-dynamic-height, md-border-bottom)
       md-tab(label="Reports")
