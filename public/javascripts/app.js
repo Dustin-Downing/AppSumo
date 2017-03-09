@@ -107,7 +107,6 @@ angular.module('sumoApp', ['ngMaterial', 'ngResource'])
 			console.log($scope.options);
       //TODO(): add form validation for all fields filled
       $http.post('/questions/create', {
-        'title' : $scope.title,
         'question' : $scope.questionDescription,
         'options' : $scope.options,
       }).success(function(data, status, headers, config) {

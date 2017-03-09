@@ -5,7 +5,6 @@ module.exports = function(app, passport) {
 
   router.post('/create', isLoggedIn, function(req, res) {
     models.Question.create({
-      title : req.body.title,
       question : req.body.question,
     }).then(function(question) {
       req.body.options.forEach(function(option) {
