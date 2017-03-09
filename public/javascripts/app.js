@@ -63,7 +63,46 @@ angular.module('sumoApp', ['ngMaterial', 'ngResource'])
   }])
   .controller('DashCtrl', ['$scope', '$http', '$window', function($scope, $http, $window) {
     $scope.options = [];
-    $scope.count = [];
+		$scope.questions = [];
+		$http.get('/questions/all', {
+		}).success(function(questions, status, headers, config) {
+			$scope.questions = questions;
+			// question.Options.forEach(function() {
+			//
+			// })
+			$scope.questions.forEach(function(question) {
+				var chartData=[];
+				var options=[];
+				question.Options.forEach(function(option) {
+					options[option.id] = 0;
+				});
+				question.Answers.forEach(function(answer) {
+					options[answer.result]++;
+				});
+				question.Options.forEach(function(option) {
+					chartData.push([option.discription, options[option.id]]);
+				});
+				var chartFoo = function() {
+					// Create the data table
+					var data = new $window.google.visualization.DataTable();
+					data.addColumn('string', 'Answers');
+					data.addColumn('number', 'Count');
+					data.addRows(chartData);
+					var options = {
+						title:question.question,
+						legend: {position: 'none'}
+					};
+					// Instantiate and draw the chart
+					var chart = new $window.google.visualization.PieChart(document.getElementById('chart-'+question.id));
+					chart.draw(data, options);
+				};
+				$window.google.charts.load('current', {'packages':['corechart']});
+				$window.google.charts.setOnLoadCallback(chartFoo);
+			})
+		}).error(function(data) {
+			console.log("Ops: " + data);
+		});
+
     $scope.makeQuestion = () => {
       //TODO(): add form validation for all fields filled
       $http.post('/questions/create', {
@@ -80,4 +119,34 @@ angular.module('sumoApp', ['ngMaterial', 'ngResource'])
       });
       console.log("creating question");
     }
+
+
+//###########################################################################
+
+		// Load Charts and the corechart package.
+		// google.charts.load('current', {'packages':['corechart']});
+		//
+		// // Draw the pie charts when Charts is loaded.
+		// google.charts.setOnLoadCallback(function() {
+		//
+		// 	// Create the data table
+		// 	var data = new google.visualization.DataTable();
+		// 	data.addColumn('string', 'Answers');
+		// 	data.addColumn('number', 'Count');
+		// 	data.addRows([
+		// 		['Mushrooms', 1],
+		// 		['Onions', 1],
+		// 		['Olives', 2],
+		// 		['Zucchini', 2],
+		// 		['Pepperoni', 1]
+		// 	]);
+		//
+		// 	var options = {
+		// 		title:'#{question.question}'
+		// 	};
+		//
+		// 	// Instantiate and draw the chart
+		// 	var chart = new google.visualization.PieChart(document.getElementById('chart#{question.id}'));
+		// 	chart.draw(data, options);
+		// });
   }])

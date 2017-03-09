@@ -18,6 +18,14 @@ module.exports = function(app, passport) {
     });
   });
 
+  router.get('/all',isLoggedIn, function(req, res) {
+    models.Question.findAll({
+      include: [ models.Answer, models.Option ]
+    }).then(function(questions) {
+      res.json(questions);
+    });
+  });
+
   function isLoggedIn(req, res, next) {
     // if user is authenticated in the session, carry on
     if (req.isAuthenticated())
