@@ -24,7 +24,7 @@ After logging in as a user you will find yourself on the welcome page where you 
 
 ###Admin dashboard
 There are two pages here, one for creating new surveys and one for viewing the reports of old surveys
-To create a new survey, fill out title, questions, and answers fields.
+To create a new survey, fill out question, and answers fields.
 
 ## Nice To Have's
 I would like to keep working on this app to make it more flashy and cleaner so that I can better show you what I am capable of, but I'd rather hand it off now so that you can look at it this week.  I'd also like to point out that I've been working on this in my off time so this took me longer than it would if I was working for y'all full-time.
