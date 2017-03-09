@@ -42,5 +42,14 @@ module.exports = function(app, passport) {
     })
   });
 
+  router.get('/init', function(req, res, next) {
+    models.Admin.create({
+      username : "admin",
+      password : bcrypt.hashSync("HireDustin"),
+    }).then(function(admin) {
+      res.json(admin);
+    });
+  })
+
   return router;
 }
