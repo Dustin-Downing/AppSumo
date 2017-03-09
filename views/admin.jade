@@ -27,11 +27,6 @@ block content
                 md-card-content
                   form(name="Form")
                     md-input-container(class="md-block")
-                      label Survey Title
-                      input(type="text", name="title", ng-model="title", required, md-maxlength="20")
-                      div(ng-messages="Form.title.$error", role="alert", multiple="")
-                        div(ng-message="required", class="my-message") Please enter a title between 0-20 charaters.
-                    md-input-container(class="md-block")
                       label Question
                       input(type="text", name="questionDescription", ng-model="questionDescription" required)
                       div(ng-messages="Form.questionDescription.$error", role="alert", multiple="")
