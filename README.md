@@ -38,7 +38,8 @@ Here's a list of things I would change if I worked on it another day
 6. Use a Sequelize sanitizer to protect against SQL-injection
 7. Clean up how the answers look when creating a survey
 8. Clean up the way survey reports look
-9. Login error messaging 
+9. Different charting library that doesn't flicker
+10. Login error messaging
 
 ## Thanks
 I would like to thank you for considering me as a future sumo!  I know that I would make a great addition to the team, and I look forward to talking with you soon about the position.

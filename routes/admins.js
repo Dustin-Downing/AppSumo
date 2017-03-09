@@ -2,7 +2,6 @@ module.exports = function(app, passport) {
   var models   = require('../models');
   var express  = require('express');
   var router   = express.Router();
-  var bcrypt   = require('bcrypt-nodejs');
 
   router.get('/', isLoggedIn, function(req, res, next) {
     res.render('admin', {});
